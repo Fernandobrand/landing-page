@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotógrafo | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">NATURALMENTE OUTDOOR - Imagens com natureza</div>
+        <nav>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Capturando a Essência</h1>
+        <p>Radical, Retratos, Eventos e Ensaios Corporativos.</p>
+        <a href="#portfolio" class="btn">Ver Trabalhos</a>
+    </section>
+
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="gallery">
+            <img src="https://picsum.photos/800/600?random=1" alt="Foto do ensaio 1">
+            <img src="https://picsum.photos/800/600?random=2" alt="Foto do ensaio 2">
+            <img src="https://picsum.photos/800/600?random=3" alt="Foto do ensaio 3">
+            <img src="https://picsum.photos/800/600?random=4" alt="Foto do ensaio 4">
+            <img src="https://picsum.photos/800/600?random=5" alt="Foto do ensaio 5">
+            <img src="https://picsum.photos/800/600?random=6" alt="Foto do ensaio 6">
+            <img src="https://picsum.photos/800/600?random=7" alt="Foto do ensaio 7">
+            <img src="https://picsum.photos/800/600?random=8" alt="Foto do ensaio 8">
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container-sobre">
+            <div class="sobre-texto">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Olá! me chama de Nando. Sou apaixonado por capturar a essência através das lentes. 
+                    Com experiência em fotografia e produção audiovisual, busco transformar momentos 
+                    comuns em memórias extraordinárias.
+                </p>
+                <p>
+                    Meu trabalho foca em retratos autênticos, sempre prezando pela técnica apurada e por um olhar sensível 
+                    aos detalhes que fazem cada história única. 
+                </p>
+                <p>
+                    Como projeto pessoal de livre observar, busco cenas de estilos de vida inquietos, que se manifestam através do esporte e da arte. 
+                </p>
+            </div>
+            <div class="sobre-foto">
+                <img src="assets/euPerfil.jpg" alt="Foto de Nando" class="foto-perfil">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+    <h2>Vamos conversar?</h2>
+    <p>Agende seu ensaio ou solicite um orçamento sem compromisso.</p>
+    
+    <div class="social-container">
+        <a href="https://wa.me/5582981393349" target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        
+        <div class="icones-sociais">
+            <a href="https://instagram.com/nando.foco" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/f3captures" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://github.com/Fernandobrand" target="_blank" title="GitHub">
+                 <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.shutterstock.com/g/f3rnandobrandao" target="_blank" title="Shutterstock">
+                  <i class="fas fa-images"></i>
+            </a>
+            <a href="https://nando.focoradical.com.br/" target="_blank" title="FocoRadical - Venda de Fotos">
+                <i class="fas fa-camera-retro"></i>
+            </a>
+            <a href="https://airgo.bio/nandobrandao" target="_blank" title="Airgo">
+                <i class="fas fa-link"></i>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2026 Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
