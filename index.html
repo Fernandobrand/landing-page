@@ -21,7 +21,7 @@
 
     <section id="hero">
         <h1>Capturando a Essência</h1>
-        <p>Radical, Retratos, Eventos e Ensaios Corporativos.</p>
+        <p>Documentais, Esportes, Produtos, Eventos, Retratos e Ensaios Corporativos.</p>
         <a href="#portfolio" class="btn">Ver Trabalhos</a>
     </section>
 
@@ -64,37 +64,37 @@
     </section>
 
     <section id="contato">
-    <h2>Vamos conversar?</h2>
-    <p>Agende seu ensaio ou solicite um orçamento sem compromisso.</p>
-    
-    <div class="social-container">
-        <a href="https://wa.me/5582981393349" target="_blank" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        
-        <div class="icones-sociais">
-            <a href="https://instagram.com/nando.foco" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
+        <h2>Vamos conversar?</h2>
+        <div class="social-container">
+            
+            <a href="https://wa.me/5582981393349" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="https://youtube.com/f3captures" target="_blank" title="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://github.com/Fernandobrand" target="_blank" title="GitHub">
-                 <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.shutterstock.com/g/f3rnandobrandao" target="_blank" title="Shutterstock">
-                  <i class="fas fa-images"></i>
-            </a>
-            <a href="https://nando.focoradical.com.br/" target="_blank" title="FocoRadical - Venda de Fotos">
-                <i class="fas fa-camera-retro"></i>
-            </a>
-            <a href="https://airgo.bio/nandobrandao" target="_blank" title="Airgo">
-                <i class="fas fa-link"></i>
-            </a>
+            <p>Agende seu ensaio ou solicite um orçamento sem compromisso.</p>
+            
+            <div class="icones-sociais">
+                <a href="https://instagram.com/nando.foco" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/f3captures" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://github.com/Fernandobrand" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.shutterstock.com/g/f3rnandobrandao" target="_blank" title="Shutterstock">
+                    <i class="fas fa-images"></i>
+                </a>
+                <a href="https://nando.focoradical.com.br/" target="_blank" title="FocoRadical - Venda de Fotos">
+                    <i class="fas fa-camera-retro"></i>
+                </a>
+                <a href="https://airgo.bio/nandobrandao" target="_blank" title="Airgo">
+                    <i class="fas fa-link"></i>
+                </a>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <p>&copy; 2026 Todos os direitos reservados.</p>
@@ -110,5 +110,18 @@
             });
         });
     </script>
+    <script>
+    // Bloqueia o botão direito
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Bloqueia atalhos como F12, Ctrl+Shift+I, Ctrl+U
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
+            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+            return false;
+        }
+    };
+</script>
 </body>
 </html>
