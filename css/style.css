@@ -14,11 +14,40 @@ html {
     scroll-behavior: smooth; 
 }
 
-body { 
-    background-color: #121212; 
-    color: #f5f5f5; 
-    line-height: 1.6;
+:root {
+    /* MODO ESCURO (Padrão) */
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --card-bg: #1a1a1a;
+    --accent-color: #00ff41; /* Verde tech que você gostou */
 }
+
+.destaque-tech:hover {
+    color:var(--accent-color);
+    transition: 0.3s;
+   
+}
+
+/* CLASSE PARA MODO CLARO */
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: #f0f0f0;
+    --accent-color: #2a9660; /* Verde mais escuro para leitura no branco */
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+
+
+
+
 
 /* CABEÇALHO */
 header { 
@@ -26,7 +55,7 @@ header {
     justify-content: space-between; 
     align-items: center;
     padding: 20px 5%; 
-    background: rgba(18, 18, 18, 0.95); 
+    background: var(--header-bg); 
     position: fixed; 
     width: 100%; 
     top: 0; 
@@ -40,20 +69,44 @@ header {
     font-weight: 800; 
     letter-spacing: 1px; 
     text-transform: uppercase;
+    
 }
 
+
 nav a { 
-    color: #f5f5f5; 
+    color: var(--text-color); 
     text-decoration: none; 
     margin-left: 20px; 
     font-size: 0.85rem; 
+    font-weight: 800; 
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s; 
 }
 
 nav a:hover { 
-    color: #888; 
+    color:var(--accent-color); 
+    
+}
+
+header {
+   border-bottom: 0px; 
+}
+
+.btn-theme {
+    background: none;
+    border: 0px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-theme:hover {
+    transform: scale(1.2);
+   
 }
 
 /* BANNER PRINCIPAL (HERO) */
@@ -75,6 +128,7 @@ nav a:hover {
     margin-bottom: 15px; 
     text-transform: uppercase;
     line-height: 1.1;
+    color: white;
 }
 #hero h2 { 
     font-family: 'Syne', sans-serif;
@@ -83,6 +137,7 @@ nav a:hover {
     margin-bottom: 15px; 
     text-transform: capitalize;
     line-height: 0.5;
+    color: white;
 }
 
 #hero p { 
@@ -151,7 +206,7 @@ h2 {
 
 /* SEÇÃO SOBRE */
 #sobre {
-    background-color: #1a1a1a;
+    background-color: var(--card-bg);
     padding: 100px 10%;
 }
 
@@ -167,6 +222,7 @@ h2 {
 .sobre-texto {
     flex: 1;
     text-align: justify;
+    color: --text-color;
 }
 
 .sobre-texto h2 {
@@ -176,7 +232,7 @@ h2 {
 
 .sobre-texto p {
     margin-bottom: 20px;
-    color: #bbb;
+    color: --text-color;
     font-weight: 300;
     line-height: 1.8;
 }
@@ -197,6 +253,14 @@ h2 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     flex-shrink: 0;
 }
+.foto-perfil:hover{
+    transform: scale(1.2);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
 
 /* BOTÕES */
 .btn { 
@@ -214,7 +278,7 @@ h2 {
 }
 
 .btn:hover { 
-    background: #ccc; 
+    background: var(--accent-color); 
     transform: translateY(-2px); 
 }
 

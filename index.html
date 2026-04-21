@@ -11,24 +11,26 @@
 <body>
 
     <header>
-        <div class="logo">IMAGENS COM NATUREZA</div>
+        <div class="logo"><span class="destaque-tech">IMAGENS COM NATUREZA </span></div>
         <nav>
             <a href="#portfolio">Portfólio</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
+            <button id="theme-toggle" class="btn-theme">🌓</button>
         </nav>
+        
     </header>
 
     <section id="hero">
-        <h2>N a n d o   B r a n d ã o </h2> 
-        <h1>Capturando a Essência</h1>
-        <p>Documentais, Esportes, Produtos, Eventos, Retratos e Ensaios Corporativos.</p>
+        <h2><span class="destaque-tech">N a n d o   B r a n d ã o </span></h2> 
+        <h1><span class="destaque-tech">Capturando a Essência</span></h1>
+        <p><span class="destaque-tech">Documentais, Esportes, Produtos, Eventos, Retratos e Ensaios Corporativos.</span></p>
         <a href="#portfolio" class="btn">Ver Trabalhos</a>
     </section>
 
 
     <section id="portfolio">
-        <h2>Portfólio</h2>
+        <h2><span class="destaque-tech">Portfólio</span></h2>
         <div class="gallery">
             <img src="https://picsum.photos/800/600?random=3" alt="Foto do ensaio 1">
             <img src="https://picsum.photos/800/600?random=3" alt="Foto do ensaio 2">
@@ -44,7 +46,7 @@
     <section id="sobre">
         <div class="container-sobre">
             <div class="sobre-texto">
-                <h2>Sobre Mim</h2>
+                <h2><span class="destaque-tech">Sobre Mim </span></h2>
                 <p>
                     Olá! me chama de Nando. Sou apaixonado por capturar a essência através das lentes. 
                     Com experiência em fotografia e produção audiovisual, busco transformar momentos 
@@ -59,13 +61,17 @@
                 </p>
             </div>
             <div class="sobre-foto">
-                <img src="assets/euPerfil.jpg" alt="Foto de Nando" class="foto-perfil">
+                <span class="destaque-tech">
+                 <a href="https://wa.me/5582981393349" >
+                  <img src="assets/euPerfil.jpg" alt="Foto de Nando" class="foto-perfil" >
+                 </a> 
+                </span>
             </div>
         </div>
     </section>
 
     <section id="contato">
-        <h2>Vamos conversar?</h2>
+        <h2><span class="destaque-tech">Vamos conversar?</span></h2>
         <div class="social-container">
             
             <a href="https://wa.me/5582981393349" target="_blank" class="btn btn-whatsapp">
@@ -112,17 +118,34 @@
         });
     </script>
     <script>
-    // Bloqueia o botão direito
-    document.addEventListener('contextmenu', event => event.preventDefault());
+        // Bloqueia o botão direito
+        document.addEventListener('contextmenu', event => event.preventDefault());
 
-    // Bloqueia atalhos como F12, Ctrl+Shift+I, Ctrl+U
-    document.onkeydown = function(e) {
-        if (e.keyCode == 123 || 
-            (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
-            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
-            return false;
+        // Bloqueia atalhos como F12, Ctrl+Shift+I, Ctrl+U
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123 || 
+                (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
+                (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+                return false;
+            }
+        };
+    </script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            // Salva a preferência do usuário (Útil para quem volta ao site)
+            const isLight = body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+
+        // Mantém o tema escolhido ao atualizar a página
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
         }
-    };
-</script>
+    </script>
 </body>
 </html>
